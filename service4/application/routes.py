@@ -9,6 +9,6 @@ import requests, random
 
 @app.route('/get/animal',methods=['GET','POST'])
 def animal():
-    number = requests.get('http://service2:5002/ball/number')
-    response = requests.post('http://service2:5003/ball/response', data=animal.text)
+    number = requests.get('http://service2:5001/ball/number')
+    response = requests.post('http://service2:5002/ball/response', data=number.text)
     return response = response.text
