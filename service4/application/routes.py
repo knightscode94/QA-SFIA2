@@ -3,18 +3,18 @@
 
 
 from flask import request, Response
-from application import app
+from application import app, db
 from application.models import Response
 import requests, random
 
 
-@app.route('/get/animal',methods=['GET','POST'])
-def animal():
+@app.route('/get/ball_response',methods=['GET','POST'])
+def ball():
     number = requests.get('http://service2:5001/ball/number')
-    response = requests.post('http://service2:5002/ball/response', data=number.text)
+    ball_response = requests.post('http://service2:5002/ball/response', data=number.text)
 
-    ball=Response(response=response)
+    ball_response=Response(ball_response=ball_response.text)
     db.session.add(ball)
     db.session.commit()
 
-    return response = response.text
+    return ball_response = ball_response.text

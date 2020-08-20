@@ -6,46 +6,46 @@ from application import app
 def ball_response():
     ball = request.data.decode("utf-8")
     if ball == "1":
-        response = "You may rely on it."
+        ball_response = "You may rely on it."
     elif ball == "2":
-        response = "Yes – definitely."
+        ball_response = "Yes – definitely."
     elif ball == "3":
-        response = "Yes."
+        ball_response = "Yes."
     elif ball == "4":
-        response = "Without a doubt."
+        ball_response = "Without a doubt."
     elif ball == "5":
-        response = "Very doubtful."
+        ball_response = "Very doubtful."
     elif ball == "6":
-        response = "Signs point to yes."
+        ball_response = "Signs point to yes."
     elif ball == "7":
-        response = "Reply hazy, try again."
+        ball_response = "Reply hazy, try again."
     elif ball == "8":
-        response = "Outlook good."
+        ball_response = "Outlook good."
     elif ball == "9":
-        response = "Outlook not so good."
+        ball_response = "Outlook not so good."
     elif ball == "10":
-        response = "My sources say no."
+        ball_response = "My sources say no."
     elif ball == "11":
-        response = "My reply is no."
+        ball_response = "My reply is no."
     elif ball == "12":
-        response = "Most likely."
+        ball_response = "Most likely."
     elif ball == "13":
-        response = "It is decidedly so."
+        ball_response = "It is decidedly so."
     elif ball == "14":
-        response = "It is certain."
+        ball_response = "It is certain."
     elif ball == "15":
-        response = "Don’t count on it."
+        ball_response = "Don’t count on it."
     elif ball == "16":
-        response = "Concentrate and ask again"
+        ball_response = "Concentrate and ask again"
     elif ball == "17":
-        response = "Cannot predict now."
+        ball_response = "Cannot predict now."
     elif ball == "18":
-        response = "Better not tell you now."
+        ball_response = "Better not tell you now."
     elif ball == "19":
-        response = "Ask again later."
+        ball_response = "Ask again later."
     elif ball == "20":
-        response = "As I see it, yes."
+        ball_response = "As I see it, yes."
     else:
-        response = "Error magic not working..."
+        ball_response = "Error magic not working..."
 
-    return Response(response, meimtype='text/plain')
+    return Response(ball_response, meimtype='text/plain')
