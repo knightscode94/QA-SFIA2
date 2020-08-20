@@ -2,7 +2,7 @@ from flask import request, Response
 from application import app
 
 
-@app.route('/ball/response', thods=['POST'])
+@app.route('/ball/response', methods=['POST'])
 def ball_response():
     ball = request.data.decode("utf-8")
     if ball == "1":
