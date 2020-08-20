@@ -1,0 +1,12 @@
+{% block body_content %}
+    <div class='form'>
+        <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+            <br>
+            {{ form.question.label }}
+            {{ form.question }}
+            <br> <br> <br>
+            {{ form.submit.label }}  {{ form.submit }}
+        </form>
+    </div>
+{% endblock %}
