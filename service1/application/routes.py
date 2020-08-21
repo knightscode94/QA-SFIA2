@@ -4,5 +4,9 @@ import requests
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('home.html', title='Home')
+    @app.route('/ball/start', methods = ['GET'])
+	username = requests.get('http://service2:5001/ball/questions')
+	game = requests.get('http://service3:5002//ball/response')
+
+    return render_template('home.html', title='Home', question=question.txt, response=response.txt)
 
