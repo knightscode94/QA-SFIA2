@@ -17,4 +17,4 @@ def ball():
     db.session.add(ball)
     db.session.commit()
 
-    return ball_response = ball_response.text
+    return ball_response.text

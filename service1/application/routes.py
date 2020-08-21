@@ -1,6 +1,6 @@
 from flask import render_template, redirect, url_for
 from application import app
-import requests, WTForms
+import requests
 
 @app.route('/', methods=['GET'])
 def home():
