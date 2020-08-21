@@ -28,20 +28,3 @@ services:
       - target: 5003
         published: 5003
         protocol: tcp
-      '''environment: 
-        DATABASE_URI: ${DATABASE_URI} #export DATABASE_URI=mysql+pymysql://root:password@database:3306/responses'''
-    database:
-        image: mysql:5.7
-        ports: 
-         - target: 3306
-           published: 3306   
-        '''environment: 
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} #export MYSQL_ROOT_PASSWORD=password (password must match DB)
-            MYSQL_DATABASE: responses
-        volumes: 
-            - type: volume
-            source: database-volume
-            target: /var/lib/mysql
-
-volumes:
-    database-volume:''''
