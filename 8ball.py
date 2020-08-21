@@ -1,4 +1,4 @@
-import sys
+'''import sys
 import random
 
 question = input("Ask the magic 8 ball a question: ")
@@ -70,4 +70,4 @@ def answer():
     else:
         return "Magic is lost..."
 
-print(answer())
+print(answer())'''
