@@ -5,9 +5,9 @@ import random
 
 @app.route('/ball/response', methods=['POST'])
 def ball_response():
-    ball = randomint(1,3)
+    ball = random.randint(1,3)
 
-    elif ball == "1":
+    if ball == "1":
         ball_response = "Without a doubt."
 
     elif ball == "2":
