@@ -4,7 +4,6 @@
 
 from flask import request, Response
 from application import app
-from application.models import Response
 import requests, random
 
 
@@ -12,7 +11,5 @@ import requests, random
 def ball():
     number = requests.get('http://service2:5001/ball/number')
     ball_response = requests.post('http://service2:5002/ball/response', data=number.text)
-
-    ball_response=Response(ball_response=ball_response.text)
 
     return ball_response.text
