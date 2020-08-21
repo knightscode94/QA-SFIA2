@@ -3,7 +3,7 @@
 
 
 from flask import request, Response
-from application import app, db
+from application import app
 from application.models import Response
 import requests, random
 
@@ -14,7 +14,5 @@ def ball():
     ball_response = requests.post('http://service2:5002/ball/response', data=number.text)
 
     ball_response=Response(ball_response=ball_response.text)
-    db.session.add(ball)
-    db.session.commit()
 
     return ball_response.text
