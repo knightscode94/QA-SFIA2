@@ -1,6 +1,9 @@
 {% extends 'layout.html' %}
 {% block body_content %}
-<h1>5 hours please have a form?</h1>
-<link rel="import" href="form.html">
-<h3>{{% answers %}}</h3>
+<div>
+	<h3>Welcome this Quote Generator.</h3>
+	<p>I am here to spark your day!</p>
+	<br><br><br>
+	<a href="{{ url_for('generate_quote') }}">Click here to generate an epic quote that will spark your day!!</a>
+</div>
 {% endblock %}
