@@ -5,7 +5,7 @@ import requests
 
 @app.route('/', methods = ['GET', 'POST'])
 def home():
-    from forms import QuestionForm
+    from form import QuestionForm
     questions = requests.get('http://service2:5001/ball/questions')
 	#answers = requests.get('http://service3:5002/ball/answers')
     return render_template('home.html', title='Home', questions=questions.text)
