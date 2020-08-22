@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body_content %}
+<div>
+	<h2> This s for you:</h2>
+	<span>
+		<p>
+		Once <b><i>  {{ data1 }}</i> </b> said: <i>" {{ data2 }} "</i> <br><br><br>
+		   {{ data3 }} <br><br>
+	</span>
+	<a href="{{ url_for('generate_ball') }} "><b>repeate</b></a> <br><br>
+
+<div>
+{% endblock %}

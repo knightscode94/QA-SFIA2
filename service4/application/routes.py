@@ -3,7 +3,7 @@ import requests
 from application import app
 import random
 
-@app.route('/get_probability',methods=['GET','POST'])
+'''@app.route('/get_probability',methods=['GET','POST'])
 def get_probability():
     
     data_sent = request.get_json()
@@ -11,4 +11,4 @@ def get_probability():
     answer = data_sent.values()
 
     
-    return Response(data_returned, mimetype='text/plain') 
+    return Response(probability, mimetype='text/plain') '''
