@@ -5,7 +5,9 @@ import random
 
 @app.route('/get_answer',methods=['GET'])
 def get_answer():
-    answers = []
+    answers = ["Not a chance",
+            "Sure why not",
+            "Errrr..."]
     answer = answers[random.randrange(3)]
     return Response(answer,mimetype='text/plain')
 
