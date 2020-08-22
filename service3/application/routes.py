@@ -3,20 +3,20 @@ from application import app
 import random
 
 
-@app.route('/ball/response', methods=['POST'])
-def ball_response():
+@app.route('/ball/answers', methods=['POST'])
+def ball_answers():
     ball = random.randint(1,3)
 
     if ball == "1":
-        ball_response = "Without a doubt."
+        ball_answers = "Without a doubt."
 
     elif ball == "2":
-        ball_response = "My reply is no."
+        ball_answers = "My reply is no."
 
     elif ball == "3":
-        ball_response = "Better not tell you now."
+        ball_answers = "Better not tell you now."
 
     else:
-        ball_response = "Error magic not working..."
+        ball_answers = "Error magic not working..."
 
-    return Response(ball_response, meimtype='text/plain')
+    return Response(ball_answers, meimtype='text/plain')

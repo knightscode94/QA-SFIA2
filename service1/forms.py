@@ -4,7 +4,7 @@ from wtforms.fields.html5 import IntegerRangeField
 from wtforms.validators import DataRequired, Length, NumberRange, ValidationError
 
 class QuestionForm(FlaskForm):
-    question = SelectField('Key Root',
+    questions = SelectField('Key Root',
                         default="Will I do amazing at QA?",
                         choices=["Will I do amazing at QA?",
                             "Is Luke the most awesome lecturer at QA?",
