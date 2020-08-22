@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body_content %}
+{{ question }}<br>
+{{ answer }} 
+<br><br>
+{{ probability }} 
+<br><br>
+<a href="{{ url_for('generate_ball') }} "><b>repeate</b></a> <br><br>
+{% endblock %}
