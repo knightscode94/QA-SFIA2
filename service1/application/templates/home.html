@@ -1,6 +1,15 @@
 {% extends 'layout.html' %}
 {% block body_content %}
 <h1>Show me something for the next stage</h1>
-<link rel="import" href="form.html">
+<div class='form'>
+    <form method='POST' action=''>
+        {{ form.hidden_tag() }}
+        <br>
+        {{ form.question.label }}
+        {{ form.question }}
+        <br>
+        {{ form.submit.label }}  {{ form.submit }}
+    </form>
+</div>
 <h3>{{ answers }}</h3>
 {% endblock %}
