@@ -3,8 +3,8 @@ import requests
 from application import app
 import random
 
-@app.route('/get_question',methods=['GET'])
-def get_question():
+@app.route('/question',methods=['GET'])
+def question():
     questions = ["Will I ever be good enough at QA?",
                 "Is Luke the most epic lecturer at QA?",
                 "Will I live a long life?",

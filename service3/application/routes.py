@@ -3,8 +3,8 @@ import requests
 from application import app
 import random
 
-@app.route('/get_answer',methods=['GET'])
-def get_answer():
+@app.route('/answer',methods=['GET'])
+def answer():
     answers = ["Not a chance",
             "Sure why not",
             "Errrr..."]
