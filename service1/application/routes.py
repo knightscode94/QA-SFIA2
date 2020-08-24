@@ -9,8 +9,8 @@ from application.models import all_data
 def home():
     return render_template('home.html', title='Home')
 
-@app.route('/genball',methods=['GET','POST'])
-def genball():
+@app.route('/ball',methods=['GET','POST'])
+def ball():
     question = requests.get('http://service2:5001/question')
     answer = requests.get('http://service3:5002/answer')
     probability = requests.post('http://service4:5003/probability',json={question.text: answer.text})
