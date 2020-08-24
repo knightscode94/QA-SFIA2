@@ -7,10 +7,10 @@ services:
       - target: 5000
         published: 5000
         protocol: tcp
-        deploy:
-        replicas: 2
+        #deploy:
+        #replicas: 2
     environment:
-      DATABASE_URI: ${DATABASE_URI}
+      DATABASE_URI: ${DATABASE_URI} #mysql+pymysql://root:password@ip/sfia2
   service2:
     image: localhost:4999/service2      
     build: ./service2
@@ -18,8 +18,8 @@ services:
       - target: 5001
         published: 5001
         protocol: tcp
-        deploy:
-        replicas: 2
+        #deploy:
+        #replicas: 2
   service3:
     image: localhost:4999/service3      
     build: ./service3
@@ -27,8 +27,8 @@ services:
       - target: 5002
         published: 5002
         protocol: tcp
-        deploy:
-        replicas: 2
+        #deploy:
+        #replicas: 2
   service4:
     image: localhost:4999/service4
     build: ./service4
@@ -36,8 +36,8 @@ services:
       - target: 5003
         published: 5003
         protocol: tcp
-        deploy:
-        replicas: 2
+        #deploy:
+        #replicas: 2
   
   database: 
     image: mysql:5.7
@@ -45,7 +45,7 @@ services:
       - target: 3306
         published: 3306
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} #password
       MYSQL_DATABASE: data_archive
     volumes:
       - type: volume
