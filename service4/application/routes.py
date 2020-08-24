@@ -35,8 +35,6 @@ def probability():
             elif answer == "Errrr..." & question == "Will I live a long life?":
                 probability = "70% True"    
             elif answer == "Errrr..." & question == "Is this a load of rubbish?":
-                probability = "10% True"  
-            else:
-                probability = "You wish I had an answer"
+                probability = "10% True"
     
     return Response(probability, mimetype='text/plain') 
