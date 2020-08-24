@@ -1,13 +1,13 @@
 from flask import render_template,redirect, url_for, request, jsonify
 import requests
-from application import app,db
+from application import app, db
 from application.models import all_data
 
 
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', title='Home')
+    return render_template('home.html', title='Magic 8 ball flop')
 
 @app.route('/ball',methods=['GET','POST'])
 def ball():
