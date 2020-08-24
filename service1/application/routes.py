@@ -1,7 +1,7 @@
 from flask import render_template,redirect, url_for, request, jsonify
 import requests
 from application import app,db
-from application.models import all_answers
+from application.models import all_data
 
 
 @app.route('/')
@@ -9,8 +9,8 @@ from application.models import all_answers
 def home():
     return render_template('home.html', title='Home')
 
-@app.route('/genanswer',methods=['GET','POST'])
-def genanswer():
+@app.route('/genball',methods=['GET','POST'])
+def genball():
     question = requests.get('http://service2:5001/question')
     answer = requests.get('http://service3:5002/answer')
     probability = requests.post('http://service4:5003/probability',json={question.text: answer.text})
