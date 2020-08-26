@@ -7,8 +7,8 @@ import random
 @app.route('/probability', methods=['GET', 'POST'])
 def probability():
 
-    question = request.get(question.text)
-    answer = request.get(answer.text)
+    question = request.get_json("question")
+    answer = request.get_json("answer")
 
     if answer == "Not a chance" & question == "Will I ever be good enough at QA?":
         probability = "60% True"
