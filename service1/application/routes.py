@@ -13,7 +13,7 @@ def home():
 def ball():
     question = requests.get('http://service2:5001/question')
     answer = requests.get('http://service3:5002/answer')
-    probability = requests.post('http://service4:5003/probability',json={"question": "question.text", "answer": "answer.txt"})
+    probability = requests.post('http://service4:5003/probability',json={"question.text", "answer.txt"})
     
     db_data = all_data(question=question.text,answer=answer.text,probability=probability.text)
     db.session.add(db_data)
