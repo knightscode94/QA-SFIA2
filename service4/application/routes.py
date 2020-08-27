@@ -13,41 +13,41 @@ def probability():
     answer = data["answer"]
     if question == "Will I ever be good enough at QA?":
         if answer == "Not a chance":
-            probability = "60% True"
+            probability = "30% True"
         elif answer == "Sure why not":
-            probability = "90% True"
-        elif answer == "Errrr...":
-            probability = "60% True"
+            probability = "40% True"
+        elif answer == "I mean maybe?":
+            probability = "Lol even the 8 ball doesnt know!"
         else:
             probability = "Yea no clue sorry..."
 
     elif question == "Is Luke the most epic lecturer at QA?":
         if answer == "Not a chance":
-            probability = "60% True"
+            probability = "30% True"
         elif answer == "Sure why not":
-            probability = "90% True"
-        elif answer == "Errrr...":
             probability = "60% True"
+        elif answer == "I mean maybe?":
+            probability = "Lol even the 8 ball doesnt know!"
         else:
             probability = "Yea no clue sorry..."
         
     elif question == "Will I live a long life?": 
         if answer == "Not a chance":
-            probability = "60% True"
+            probability = "80% True"
         elif answer == "Sure why not":
-            probability = "90% True"
-        elif answer == "Errrr...":
-            probability = "60% True"
+            probability = "10% True"
+        elif answer == "I mean maybe?":
+            probability = "Lol even the 8 ball doesnt know!"
         else:
             probability = "Yea no clue sorry..."
 
     elif question == "Is this a load of rubbish?":
         if answer == "Not a chance":
-            probability = "60% True"
+            probability = "30% True"
         elif answer == "Sure why not":
-            probability = "90% True"
-        elif answer == "Errrr...":
-            probability = "60% True"
+            probability = "70% True"
+        elif answer == "I mean maybe?":
+            probability = "Lol even the 8 ball doesnt know!"
         else:
             probability = "Yea no clue sorry..."
             

@@ -7,7 +7,7 @@ import random
 def answer():
     answers = ["Not a chance",
             "Sure why not",
-            "Errrr..."]
+            "I mean maybe?"]
     answer = answers[random.randrange(3)]
     return Response(answer,mimetype='text/plain')
 
