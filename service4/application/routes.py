@@ -11,8 +11,8 @@ def probability():
 
     question = data.keys()
     answer = data.values()
-    for key in question[key]:
-            for value in answer[value]:
+    for key in question:
+            for value in answer:
                 if answer[value] == "Not a chance" & question[key] == "Will I ever be good enough at QA?":
                     probability = "60% True"
                 elif answer[value] == "Not a chance" & question[key] == "Is Luke the most epic lecturer at QA?":
