@@ -13,12 +13,12 @@ def home():
 def ball():
     question = requests.get('http://service2:5001/question')
     answer = requests.get('http://service3:5002/answer')
-    probability = requests.post('http://service4:5003/probability',json={"question.text": "answer.text"})
+    probability = requests.post('http://service4:5003/probability',json={question.text: answer.text})
     
-    '''db_data = all_data(question=question.text,answer=answer.text,probability=probability.text)
+    db_data = all_data(question=question.text,answer=answer.text,probability=probability.text)
     db.session.add(db_data)
     db.session.commit()
-    data_record=all_data.query.all()'''
-    data_record=[all_data(question="how are you?", answer="nope", probability="not true")]
+    data_record=all_data.query.all()
+    #data_record=[all_data(question="how are you?", answer="nope", probability="not true")]
     
     return render_template('ball.html',title='Not so magic 8 Ball',question=question.text,answer=answer.text,probability=probability.text,posts=data_record)
