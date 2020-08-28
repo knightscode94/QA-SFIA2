@@ -13,7 +13,6 @@ from os import getenv
 
 class TestBase(TestCase):
     def create_app(self):
-        config_name = 'testing'
         app.config.update(SQLALCHEMY_DATABASE_URI=getenv('DATABASE_URI'),
                 SECRET_KEY=getenv('SECRET_KEY'),
                 WTF_CSRF_ENABLED=False,
