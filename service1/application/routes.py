@@ -18,7 +18,7 @@ def ball():
     db_data = all_data(question=question.text,answer=answer.text,probability=probability.text)
     db.session.add(db_data)
     db.session.commit()
-    #data_record=all_data.query.all()
+    data_record=all_data.query.all()
     
     
     return render_template('ball.html',title='Not so magic 8 Ball',question=question.text,answer=answer.text,probability=probability.text,posts=data_record)
