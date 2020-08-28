@@ -1,0 +1,12 @@
+- hosts: nginx
+  become: true
+  roles:
+  - common
+  - role: nginx
+---
+- hosts: docker
+  become: true
+  roles:
+  - common
+  - role: docker
+

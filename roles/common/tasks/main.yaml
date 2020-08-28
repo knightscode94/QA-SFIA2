@@ -1,0 +1,21 @@
+- name: 'zsh installed'
+  apt:
+    name: zsh
+    state: latest
+    update_cache: yes
+- name: 'developer group'
+  group:
+    name: developer
+    state: present
+- name: 'tobi user'
+  user:
+    name: tobi
+    comment: Developer Tobi
+    shell: /bin/zsh
+    groups: developer
+    append: yes
+- name: 'jenkins user'
+  user:
+    name: jenkins
+    comment: Jenkins Automation User
+    shell: /bin/bash
