@@ -47,12 +47,12 @@ services:
   service4:
     image: localhost:4999/service4
     build: ./service4
+    deploy:
+      replicas: 2
     ports:
       - target: 5003
         published: 5003
         protocol: tcp
-        deploy:
-          replicas: 2
   
   database: 
     image: mysql:5.7
