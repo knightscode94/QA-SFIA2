@@ -31,4 +31,4 @@ class TestResponse(TestBase):
             g.return_value.text = "3"
 
             response = self.client.get(url_for('question'))
-            self.assertIn(b'Errrr...', response.data)
+            self.assertIn(b'I mean maybe?, response.data)
