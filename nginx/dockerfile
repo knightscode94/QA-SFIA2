@@ -1,5 +1,5 @@
 FROM nginx:latest
-USER nginx
+
 WORKDIR /etc/nginx/
 RUN apt update -y
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
