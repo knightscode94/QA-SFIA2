@@ -4,3 +4,5 @@ WORKDIR /etc/nginx/
 
 RUN apt update -y
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
+RUN systemctl reload nginx
+
