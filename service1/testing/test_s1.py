@@ -37,11 +37,11 @@ class TestBase(TestCase):
         db.drop_all()
 
 class TestService1(TestBase):
-    def test_home_page(self):
+    def test_home(self):
         response = self.client.get(url_for('home'))
         self.assertEqual(response.status_code, 200)
 
-    def test_generate_ball(self):
+    def test_ball(self):
             with self.client:
                 with requests_mock.Mocker() as m:
                     m.get('http://service2:5001/question', text='"Will I live a long life?')
