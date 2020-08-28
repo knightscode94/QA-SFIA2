@@ -128,7 +128,7 @@ I started the project by creating the home page first to generate some data on w
 
 
 ### Database Structure
-![alt text](https://github.com/knightscode94/QA-SFIA/blob/master/documentation/Jenkins%20build.png)
+![alt text](https://github.com/knightscode94/QA-SFIA2/blob/master/docs/DB.png)
 
 
 ### CI Pipeline
