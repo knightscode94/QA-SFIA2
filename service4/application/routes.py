@@ -13,9 +13,9 @@ def probability():
     answer = data["answer"]
     if question == "Will I ever be good enough at QA?":
         if answer == "Not a chance":
-            probability = str(random.randint(1,100)), " True"
+            probability = str(random.randint(1,100)), "% True"
         elif answer == "Sure why not":
-            probability = str(random.randint(1,100)), " True"
+            probability = str(random.randint(1,100)), "% True"
         elif answer == "I mean maybe?":
             probability = "Lol even the 8 ball doesnt know!"
         else:
@@ -23,9 +23,9 @@ def probability():
 
     elif question == "Is Luke the most epic lecturer at QA?":
         if answer == "Not a chance":
-            probability = str(random.randint(1,100)), " True"
+            probability = str(random.randint(1,100)), "% True"
         elif answer == "Sure why not":
-            probability = str(random.randint(1,100)), " True"
+            probability = str(random.randint(1,100)), "% True"
         elif answer == "I mean maybe?":
             probability = "Lol even the 8 ball doesnt know!"
         else:
@@ -33,9 +33,9 @@ def probability():
         
     elif question == "Will I live a long life?": 
         if answer == "Not a chance":
-            probability = str(random.randint(1,100)), " True"
+            probability = str(random.randint(1,100)), "% True"
         elif answer == "Sure why not":
-            probability = str(random.randint(1,100)), " True"
+            probability = str(random.randint(1,100)), "% True"
         elif answer == "I mean maybe?":
             probability = "Lol even the 8 ball doesnt know!"
         else:
@@ -43,9 +43,9 @@ def probability():
 
     elif question == "Is this a load of rubbish?":
         if answer == "Not a chance":
-            probability = str(random.randint(1,100)), " True"
+            probability = str(random.randint(1,100)), "% True"
         elif answer == "Sure why not":
-            probability = str(random.randint(1,100)), " True"
+            probability = str(random.randint(1,100)), "% True"
         elif answer == "I mean maybe?":
             probability = "Lol even the 8 ball doesnt know!"
         else:
