@@ -1,0 +1,59 @@
+version: '3.7'
+services:
+
+  service1:
+    image: localhost:4999/service1
+    build: ./service1
+    deploy:
+      replicas: 2
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    environment:
+      DATABASE_URI: ${DATABASE_URI} #mysql+pymysql://root:password@ip/sfia2
+  service2:
+    image: localhost:4999/service2      
+    build: ./service2
+    deploy:
+      replicas: 2
+    ports:
+      - target: 5001
+        published: 5001
+        protocol: tcp
+
+  service3:
+    image: localhost:4999/service3      
+    build: ./service3
+    deploy:
+      replicas: 2
+    ports:
+      - target: 5002
+        published: 5002
+        protocol: tcp
+        
+  service4:
+    image: localhost:4999/service4
+    build: ./service4
+    deploy:
+      replicas: 2
+    ports:
+      - target: 5003
+        published: 5003
+        protocol: tcp
+  
+  database: 
+    image: mysql:5.7
+    ports:
+      - target: 3306
+        published: 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} #password
+      MYSQL_DATABASE: data_archive
+    volumes:
+      - type: volume
+        source: database-volume
+        target: /var/lib/mysql
+
+volumes:
+  database-volume:        
