@@ -136,21 +136,9 @@ I started the project by creating the home page first to generate some data on w
 
 #### My Jenkins Workflow
 
-For my CI server in this project, I chose to use Jenkins, over other popular services such as Travis, CircleCI and TeamCity.
+For my CI server in this project, I chose to use Jenkins.
 
-Jenkins has official plugin support for docker swarm, which would make it considerably easier to deploy mélodie as a containerised microservice.
-I implore Jenkins for it's third party support with Junit XML testing, with the ability to view our PyTest results on our build page.
-
-I could have deployed Jenkins as it's own containerised service using Docker Swarm. 
-For this project however, I chose running an instance of Jenkins on it's own independent VM within GCP. This was for a number of reasons:
-
-- **Simplicity:** With the application that I am running currently being so small in scope, I won't ever require the need to scale up or scale out Jenkins in a containerised fashion. It would be an overkill waste of time, money, and resources.
-- **Familiarity:** Within the time scale of this project, I do not have hours in the day required for me to learn the ins and outs of deploying Jenkins as a containerised service using Docker Swarm. 
-- **Industry Standards:** After additional research, I discovered that a more widely supported and preferred approach to running Jenkins as a microservice is to run it using Kubernetes over Docker Swarm, with proprietary support from both Google and AWS.
-
-Chose to write my jenkins shell scripts in sh, then executing them within the Jenkins command shell.
-
-We finally run the 'pytest-cov' equivalent command, which outputs a Junit Test, for reading with Jenkins.
+Jenkins has official plugin support for docker swarm, and proved as a positive in my last QA-SFIA project. I am expecting to run into a few issues implementing jenkins as instead of it running one flask app its going to have 4 micro apps.
 
 
 ### Front End Development
