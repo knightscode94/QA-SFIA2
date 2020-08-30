@@ -18,13 +18,23 @@ class TestBase(TestCase):
     def tearDown(self):
         pass
 
-class TestService2(TestBase):
+class TestService4(TestBase):
 
     def test_probability(self):
-            with self.client:
-                with requests_mock.Mocker() as m:
-                    m.get('http://service2:5001/question', text='"Will I live a long life?')
-                    m.get('http://service3:5002/answer', text='Sure why not')
-                    m.post('http://service4:5003/probability', text='50% True')                
-                    response = self.client.get(url_for('probability'))
-                    self.assertEqual(response.status_code, 200)
+        response = self.client.get(url_for('question'))
+        check = False
+        for quest in ["Will I ever be good enough at QA?",
+                "Is Luke the most epic lecturer at QA?",
+                "Will I live a long life?",
+                "Is this a load of rubbish?"]:
+            if bytes.decode(response.data) == quest:
+                check = True
+        response = self.client.get(url_for('answer'))
+        check = False
+        for ans in ["Not a chance",
+            "Sure why not",
+            "I mean maybe?"]:
+            if bytes.decode(response.data) == ans:
+                check = True
+                
+        self.assertTrue(check)
