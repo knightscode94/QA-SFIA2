@@ -14,3 +14,14 @@ class TestBase(TestCase):
         pass
     def tearDown(self):
         pass
+
+class TestService2(TestBase):
+
+    def test_probability(self):
+            with self.client:
+                with requests_mock.Mocker() as m:
+                    m.get('http://service2:5001/question', text='"Will I live a long life?')
+                    m.get('http://service3:5002/answer', text='Sure why not')
+                    m.post('http://service4:5003/probability', text='50% True')                
+                    response = self.client.get(url_for('probability'))
+                    self.assertEqual(response.status_code, 200)
