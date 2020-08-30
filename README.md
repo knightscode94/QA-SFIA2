@@ -146,28 +146,14 @@ Jenkins has official plugin support for docker swarm, and proved as a positive i
 
 
 ## Testing
-
-
-
-
-### Unit Testing
-
-Unit testing of our services took longer to write than the actual MVP code...
-...But that's okay, I was reading information, and this challenged me to think about TDD with a professional understanding.
-
-#### Unit Testing Service #1
-
-#### Unit Testing Service #2
-
-
-#### Unit Testing Service #3
-
-
-#### Unit Testing Service #4
-
-### Functional Testing
-
-
+service 1
+![alt text](https://github.com/knightscode94/QA-SFIA2/blob/master/docs/S1.png)
+service 2
+![alt text](https://github.com/knightscode94/QA-SFIA2/blob/master/docs/S2.png)
+Service 3
+![alt text](https://github.com/knightscode94/QA-SFIA2/blob/master/docs/S3.png)
+Service 4
+![alt text](https://github.com/knightscode94/QA-SFIA2/blob/master/docs/S4.png)
 
 
 ## Project Review
