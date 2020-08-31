@@ -87,7 +87,7 @@ Service 4
 
 
 ## Project Review
-although I have created a project with multiple services that interact with each other I have unfortunatley only managed to get my project to work using docker-compose, my tests dont run properly, I dont even know if my ansible is properly working, jenkins isnt set up properly, I have tried to do everything needed for this project but know I didnt manage to hit all the targets. My biggest struggle was the 4 services and getting them to run. I had to rewrite my project into something more basic and still struggled.
+although I have created a project with multiple services that interact with each other I have unfortunatley only managed to get my project to work using docker-compose, my tests dont run properly, I dont even know if my ansible is properly working, jenkins isnt set up properly, I have tried to do everything needed for this project but know I didnt manage to hit all the targets. My biggest struggle was the 4 services and getting them to run. I had to rewrite my project into something more basic and still struggled. I honestly thought choosing the 8ball application would be easy to set up but realised how difficult this challenge was when making into micro apps.
 
 
 ### Known Issues and Future Optimisations
