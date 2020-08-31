@@ -14,7 +14,7 @@ class TestBase(TestCase):
     def tearDown(self):
         pass
 
-class TestService2(TestBase):
+class TestService3(TestBase):
 
     def test_questions(self):
         response = self.client.get(url_for('answer'))
